@@ -1,0 +1,86 @@
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 200 to 1000*/
+
+.body {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 100%; /* grandezza font body */
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+* {  /* ridimensionamento bordi per tutto */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {  /* grendezza font tutto testo */
+    font-size: 10px;
+}
+body {
+    background-color: #161020;
+    color: rgb(248, 232, 212);
+}
+
+/* Common styles */
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: rgb(248, 232, 212);
+}
+.description {
+    font-size: 1.8rem;
+    padding-right: 4rem;
+    font-weight: 400;
+    font-size: 2rem;
+    color: rgb(177, 171, 163);
+}
+
+/* layouts */
+.curriculum {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem; /* i rem si basano sulla grandezza della funzione html scritta sopra */
+    background-color: #281d3a;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+}
+@media only screen and (max-width: 768px) {
+    .curriculum {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+/* profile */
+.profile_container{
+    display: flex;
+    gap: 4rem;
+}
+.profile.img {
+    max-width: 250px;
+}
+.profile_name_firstName {
+    color: rgb(224, 193, 155);
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw ,4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-top: -0.7rem;
+}
+.profile_name_lastName {
+    font-size: clamp(2.5rem, 6vw ,3.5rem);
+    display: block;
+}
