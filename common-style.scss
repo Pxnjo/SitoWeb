@@ -1,0 +1,23 @@
+$font-size: 1.8rem;
+$padding-right: 4rem;
+$font-weight: 400;
+$color: rgb(177, 171, 163);
+
+@mixin common-styles {
+    font-size: $font-size;
+    padding-right: $padding-right;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin img {
+        width: 100%;
+}
+
+img {
+    @include img;
+}
+
+.description {
+    @include common-styles;
+}
