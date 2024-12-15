@@ -20,4 +20,5 @@ img {
 
 .description {
     @include common-styles;
+    font-style: italic;
 }
