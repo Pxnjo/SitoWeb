@@ -1,0 +1,22 @@
+@media only screen and (max-width: 468px) {
+    .curriculum {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+/* }
+@media  only screen and (max-width: 468px) { */
+    .profile_container {
+        flex-direction: column;
+        .profile_img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .skills {
+        grid-template-columns: 1fr;
+        gap: 0rem;
+    }
+}

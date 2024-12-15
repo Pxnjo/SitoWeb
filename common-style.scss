@@ -1,24 +1,37 @@
-$font-size: 1.8rem;
-$padding-right: 4rem;
-$font-weight: 400;
-$color: rgb(177, 171, 163);
-
-@mixin common-styles {
-    font-size: $font-size;
-    padding-right: $padding-right;
-    font-weight: $font-weight;
-    color: $color;
+* {  /* ridimensionamento bordi per tutto */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-@mixin img {
-        width: 100%;
+@mixin common-description {
+    font-size:1.8rem;
+    font-weight: 400;
+    color: rgb(177, 171, 163);
+    font-style: italic;
+}
+
+@mixin common-titles {
+        color: rgb(224, 193, 155);
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
 }
 
 img {
-    @include img;
+    width: 100%;
 }
 
-.description {
-    @include common-styles;
-    font-style: italic;
+.description, .skills_list {
+    @include common-description;
+}
+
+.title_group_1, .title {
+    @include common-titles;
+    font-size: 2.5rem;
+}
+
+.title_list, .profile_title {
+    @include common-titles;
+    font-size: 1.5rem;
 }

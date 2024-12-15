@@ -1,11 +1,32 @@
+* { /* ridimensionamento bordi per tutto */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 img {
   width: 100%;
 }
 
-.description {
+.description, .skills_list {
   font-size: 1.8rem;
-  padding-right: 4rem;
   font-weight: 400;
   color: rgb(177, 171, 163);
   font-style: italic;
+}
+
+.title_group_1, .title {
+  color: rgb(224, 193, 155);
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.title_list, .profile_title {
+  color: rgb(224, 193, 155);
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=common-style.css.map */
