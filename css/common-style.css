@@ -15,7 +15,7 @@ img {
   font-style: italic;
 }
 
-.title_group_1, .Title_school, .title_esperienze, .title_lavorative, .soft_skills_title {
+.title_group_1, .Title_school, .title_esperienze, .title_lavorative, .soft_skills_title, .languages_title {
   color: rgb(224, 193, 155);
   font-weight: 700;
   font-size: 2rem;

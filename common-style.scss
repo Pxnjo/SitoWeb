@@ -27,7 +27,7 @@ img {
     @include common-description;
 }
 
-.title_group_1, .Title_school, .title_esperienze, .title_lavorative, .soft_skills_title {
+.title_group_1, .Title_school, .title_esperienze, .title_lavorative, .soft_skills_title, .languages_title {
     @include common-titles;
     font-size: 2.5rem;
 }

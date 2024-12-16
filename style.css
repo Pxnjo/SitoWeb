@@ -1,5 +1,9 @@
-/* <uniquifier>: Use a unique and descriptive class name
- <weight>: Use a value from 200 to 1000*/
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+
+
 
 .body {
   font-family: "Nunito Sans", serif;
@@ -18,26 +22,24 @@ body {
     color: rgb(248, 232, 212);
 }
 
-/* Common styles ? */
-a {
-    text-decoration: none;
-    color: rgb(248, 232, 212);
-}
 
 /* layouts */
 .navigate_bar {
-    height: 3rem;
+    height: 4rem;
 }
 .curriculum {
+    border-radius: 1.5em;
     text-align: center;
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 4rem;
     display: grid;
     padding: 5rem; /* i rem si basano sulla grandezza della funzione html scritta sopra */
     background-color: #281d3a;
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
+    
 }
 
 /* profile */
@@ -66,7 +68,6 @@ a {
     display: block;
     text-transform: uppercase;
 }
-
 
 /* Competenze */
 .group-1 {
@@ -110,6 +111,40 @@ a {
 .soft_skills_title {
     margin-top: 6rem;
     margin-bottom: 2rem;
+}
+
+/* Lingue */
+.languages_title {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+.progress_bar_ita, .progress_bar_rum, .progress_bar_eng {
+    position: relative;
+    margin: 1rem auto;
+    height: 4em;
+    width: 100%;
+    background-color: #161020;
+    border-radius: 1.5em;
+    color: rgb(33, 17, 44);
+    font-size: 2em;
+}
+.progress_bar_ita::before, .progress_bar_rum::before, .progress_bar_eng::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    bottom: .5em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2em;
+    max-width: calc(100% - 1em);
+    background-color: #a798bf;
+    border-radius: 1em;
+    padding-left: 1em;
+}
+.progress_bar_eng::before {
+    max-width: calc(70% - 1em);
 }
 
 /* Esperienze  Lavorative */
