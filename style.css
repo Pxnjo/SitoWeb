@@ -1,10 +1,27 @@
+/* all common layout page */
 *,*::before,*::after {
     box-sizing: border-box;
 }
+* { /* ridimensionamento bordi per tutto */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-
-
-
+:root{
+    --body-color: #161020; 
+    --curriculum-color: #281d3a;
+    --mini-title-text-color: #F8E8D4;
+    --description-color: #B1ABA3;
+    --title-color-beige: #E0C19B;
+}
+.darkmode{
+    --body-color: #90b2b7; 
+    --curriculum-color: #6d8ba3;
+    --mini-title-text-color: #12110f;
+    --description-color: #c1c0c0;
+    --title-color-beige: #080706;
+}
 .body {
   font-family: "Nunito Sans", serif;
   font-optical-sizing: auto;
@@ -18,14 +35,77 @@ html {  /* grendezza font tutto testo */
     font-size: 10px;
 }
 body {
-    background-color: #161020;
-    color: rgb(248, 232, 212);
+    background-color: var(--body-color);
+    color: var(--mini-title-text-color);
 }
+
+img {
+    width: 100%;
+  }
+  
+  .description, .skills_list, .description_school, .work_description_align, .soft_skills_align, .link {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--description-color);
+    font-style: italic;
+  }
+  
+  .title_group_1, .Title_school, .title_esperienze, .title_lavorative, .soft_skills_title, .languages_title, .contacts_title {
+    color: var(--title-color-beige);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 3em;
+  }
+  
+  .title_list, .profile_title, .contacts_body_1_title {
+    color: var(--title-color-beige);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 2rem;
+  }
+  
+  li {
+    padding-bottom: 1.5rem;
+  }
 
 
 /* layouts */
-.navigate_bar {
-    height: 4rem;
+#theme_switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--curriculum-color);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#theme_switch svg{
+    fill: var(--body-color);
+}
+#theme_switch svg:last-child{
+    display: none;
+}
+.darkmode #theme_switch svg:first-child{
+    display: none;
+}
+.darkmode #theme_switch svg:last-child{
+    display: block;
+}
+
+
+.curriculum_profile {
+    border-radius: 1.5em;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 5rem;
+    background-color: var(--curriculum-color);
 }
 .curriculum {
     border-radius: 1.5em;
@@ -35,18 +115,22 @@ body {
     margin: 0 auto;
     margin-bottom: 4rem;
     display: grid;
-    padding: 5rem; /* i rem si basano sulla grandezza della funzione html scritta sopra */
-    background-color: #281d3a;
+    padding: 5rem;
+    background-color: var(--curriculum-color);
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
-    
+}
+.contacts {
+    border-radius: 1.5em;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 5rem;
+    background-color: var(--curriculum-color);
 }
 
 /* profile */
-.profile {
-    grid-column: 1 / -1;
-    margin-bottom: 2rem;
-}
 .profile_container{
     display: flex;
     gap: 4rem;
@@ -56,7 +140,7 @@ body {
     max-width: 250px;
 }
 .profile_name_firstName {
-    color: rgb(224, 193, 155);
+    color: var(--title-color-beige);
     font-weight: 200;
     font-size: clamp(2rem, 8vw ,4rem);
     text-transform: uppercase;
@@ -80,7 +164,7 @@ body {
     gap: 6rem;
 }  
 .skills_list {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     line-height: 1.5;
 }
 .title_group_1 {
@@ -123,9 +207,9 @@ body {
     margin: 1rem auto;
     height: 4em;
     width: 100%;
-    background-color: #161020;
+    background-color: var(--body-color);
     border-radius: 1.5em;
-    color: rgb(33, 17, 44);
+    color: var(--body-color);
     font-size: 2em;
 }
 .progress_bar_ita::before, .progress_bar_rum::before, .progress_bar_eng::before {
@@ -139,9 +223,13 @@ body {
     width: calc(var(--width, 0) * 1%);
     min-width: 2em;
     max-width: calc(100% - 1em);
-    background-color: #a798bf;
+    background-color: var(--curriculum-color);
+    color: var(--title-color-beige);
     border-radius: 1em;
     padding-left: 1em;
+}
+.progress_bar_rum::before {
+    max-width: calc(90% - 1em);
 }
 .progress_bar_eng::before {
     max-width: calc(70% - 1em);
@@ -159,3 +247,34 @@ body {
 .work_description_allign {
     gap: 20px;
 }
+
+/* Contatti */
+.contacts {
+    text-align: center;
+}
+.contacts_body {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 2rem;
+    img{
+        width: 20px;
+        padding-right: 5px;
+    }
+    .link{
+        font-size: 2rem;
+    }
+}
+.contacts_body_1_title {
+    margin-bottom: 1rem;
+}
+.contacts_body_title  {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 1.2rem;
+    .link{
+        font-size: 1.5rem;
+    }
+}
+

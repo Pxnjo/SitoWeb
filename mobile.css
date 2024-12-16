@@ -1,12 +1,18 @@
-@media only screen and (max-width: 468px) {
+@media only screen and (max-width: 600px) {
+    
+    .curriculum_profile {
+        width: 95%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+    
     .curriculum {
         width: 95%;
         grid-template-columns: 1fr;
         padding: 3rem;
         gap: 7rem;
     }
-/* }
-@media  only screen and (max-width: 468px) { */
     .profile_container {
         flex-direction: column;
         text-align: center;
@@ -25,4 +31,20 @@
         grid-template-columns: 1fr;
         gap: 6rem;
     }
-}
+
+    .contacts {
+        width: 95%;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 7rem;
+    }
+    .contacts_body {
+        grid-template-columns: 1fr;
+    }
+    
+} 
+
+
+
+    
+
