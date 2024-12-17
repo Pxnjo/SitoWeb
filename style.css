@@ -1,3 +1,5 @@
+
+
 /* all common layout page */
 *,*::before,*::after {
     box-sizing: border-box;
@@ -14,6 +16,8 @@
     --mini-title-text-color: #F8E8D4;
     --description-color: #B1ABA3;
     --title-color-beige: #E0C19B;
+    --curriculum-hover: #1c152e;
+    --curriculum-hover-shadow: #382e55;    
 }
 .darkmode{
     --body-color: #90b2b7; 
@@ -21,7 +25,13 @@
     --mini-title-text-color: #12110f;
     --description-color: #ffffff;
     --title-color-beige: #080706;
+    --curriculum-hover: #3e576d;
+    --curriculum-hover-shadow: #92aabd;
 }
+.darkmode.body {
+    background-image: url('./immagini/Background/background_sea.png');
+}
+
 .body {
   font-family: "Nunito Sans", serif;
   font-optical-sizing: auto;
@@ -37,6 +47,11 @@ html {  /* grendezza font tutto testo */
 body {
     background-color: var(--body-color);
     color: var(--mini-title-text-color);
+    background-image: url('./immagini/Background/background_purple.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
 
 img {
@@ -120,6 +135,12 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
 }
+
+.curriculum:hover, .curriculum_profile:hover, .contacts:hover {
+    box-shadow: 12px 12px 12px var(--curriculum-hover) inset,
+    -10px  -10px 10px var(--curriculum-hover-shadow) inset;
+}
+
 .contacts {
     border-radius: 1.5em;
     max-width: 1000px;
