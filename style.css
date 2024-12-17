@@ -19,7 +19,7 @@
     --body-color: #90b2b7; 
     --curriculum-color: #6d8ba3;
     --mini-title-text-color: #12110f;
-    --description-color: #c1c0c0;
+    --description-color: #ffffff;
     --title-color-beige: #080706;
 }
 .body {
@@ -172,6 +172,7 @@ img {
 }
 
 /* Istruzione */
+
 .group-2 {
     grid-column: 1 / -1;
     display: grid;
