@@ -11,26 +11,56 @@
   }
 
 :root{
-    --body-color: #161020; 
-    --curriculum-color: #281d3a;
+    --body-color: #0c0514; 
+    --curriculum-color: #260a42;
     --mini-title-text-color: #F8E8D4;
     --description-color: #B1ABA3;
     --title-color-beige: #E0C19B;
-    --curriculum-hover: #1c152e;
-    --curriculum-hover-shadow: #382e55;    
+    --curriculum-hover: #120321;
+    --curriculum-hover-shadow: #2e1c4d;    
 }
 .darkmode{
-    --body-color: #90b2b7; 
-    --curriculum-color: #6d8ba3;
+    --body-color: #b3d5db; 
+    --curriculum-color: #73b2a9;
     --mini-title-text-color: #12110f;
     --description-color: #ffffff;
     --title-color-beige: #080706;
-    --curriculum-hover: #3e576d;
-    --curriculum-hover-shadow: #92aabd;
+    --curriculum-hover: #396962;
+    --curriculum-hover-shadow: #b3d5db;
 }
+
+/* impostazioni darkmode */
 .darkmode.body {
     background-image: url('./immagini/Background/background_sea.png');
 }
+#theme_switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--curriculum-color);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#theme_switch svg{
+    fill: var(--body-color);
+}
+#theme_switch svg:last-child{
+    display: none;
+}
+.darkmode #theme_switch svg:first-child{
+    display: none;
+}
+.darkmode #theme_switch svg:last-child{
+    display: block;
+}
+
+.curriculum:hover, .curriculum_profile:hover, .contacts:hover {
+    box-shadow: 12px 12px 12px var(--curriculum-hover) inset,
+    -10px  -10px 10px var(--curriculum-hover-shadow) inset;
+}
+
 
 .body {
   font-family: "Nunito Sans", serif;
@@ -51,14 +81,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
 }
 
 img {
     width: 100%;
   }
   
-  .description, .skills_list, .description_school, .work_description_align, .soft_skills_align, .link {
+  .description, .skills_list, .description_school, .work_description_align, .soft_skills_align, .link, .certificazioni {
     font-size: 2.5rem;
     font-weight: 400;
     color: var(--description-color);
@@ -89,28 +118,6 @@ img {
 
 
 /* layouts */
-#theme_switch{
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: var(--curriculum-color);
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-#theme_switch svg{
-    fill: var(--body-color);
-}
-#theme_switch svg:last-child{
-    display: none;
-}
-.darkmode #theme_switch svg:first-child{
-    display: none;
-}
-.darkmode #theme_switch svg:last-child{
-    display: block;
-}
 
 
 .curriculum_profile {
@@ -134,11 +141,6 @@ img {
     background-color: var(--curriculum-color);
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
-}
-
-.curriculum:hover, .curriculum_profile:hover, .contacts:hover {
-    box-shadow: 12px 12px 12px var(--curriculum-hover) inset,
-    -10px  -10px 10px var(--curriculum-hover-shadow) inset;
 }
 
 .contacts {
@@ -218,6 +220,9 @@ img {
     margin-top: 6rem;
     margin-bottom: 2rem;
 }
+.soft_skills_align > p {
+    padding-bottom: 1rem;
+}
 
 /* Lingue */
 .languages_title {
@@ -269,10 +274,52 @@ img {
 .work_description_allign {
     gap: 20px;
 }
+.work {
+    padding-bottom: 6rem;
+}  
+
+/* Bottone Certificazioni */
+
+.certificazioni > ul  > li {
+    padding: 2.5rem;
+}
+
+.certificazioni_box {
+    display: flex;
+    gap: 20px;
+    width: 300px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    position: sticky;
+    right: 100px;
+    display: none;
+}
+.card {
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    flex-shrink: 0;
+    width: 300px;
+    background-color: #E0C19B;
+    /* backdrop-filter: blur(10px); */
+    border-radius: 14px;
+    text-align: center;
+    font-size: clamp(1rem, 8vw ,2rem);
+}
+
+
+/* Autorizzazione trattamento dati */
+.autorizzo_trattamento {
+    grid-column: 1 / -1;
+    font-size: 1.5em;
+}
+
 
 /* Contatti */
 .contacts {
     text-align: center;
+    backdrop-filter: blur(10px);
+
 }
 .contacts_body {
     display: flex;

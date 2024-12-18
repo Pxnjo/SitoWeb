@@ -41,7 +41,10 @@
     .contacts_body {
         grid-template-columns: 1fr;
     }
-    
+    .certificazioni_box {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
 } 
 
 
