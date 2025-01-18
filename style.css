@@ -77,7 +77,7 @@ html {  /* grendezza font tutto testo */
 body {
     background-color: var(--body-color);
     color: var(--mini-title-text-color);
-    background-image: url('./immagini/Background/background_purple.jpg');
+    /* background-image: url('./immagini/Background/background_purple.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -284,6 +284,8 @@ img {
     padding: 2.5rem;
 }
 
+
+
 .certificazioni_box {
     display: flex;
     gap: 20px;
@@ -300,7 +302,7 @@ img {
     padding: 20px 30px;
     flex-shrink: 0;
     width: 300px;
-    background-color: #E0C19B;
+    /* background-color: #E0C19B; */
     /* backdrop-filter: blur(10px); */
     border-radius: 14px;
     text-align: center;
