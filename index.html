@@ -13,14 +13,27 @@
     <script type="text/javascript" src="darkmode.js" defer></script>
     
 </head>
+<div class="colonna_sinistra">
+    <div class="colonna_sinistra_1">
+    </div>
+</div>
 <body class="body">
     <div class="navigate_bar">
+            <label class="search-label">
+                <input type="text" name="text" id="searchInput" class="input" required="" placeholder="Search..." oninput="highlightText()">
+                <kbd class="slash-icon">/</kbd>
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                  <g>
+                    <path d="M55.146 51.887 41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z" fill="currentColor" data-original="#000000" class=""></path>
+                  </g>
+                </svg>
+              </label>
         <div class="button">
             <button id="theme_switch">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
         </button>
-    </div>
+        </div>
     </div>
     <div class="curriculum_profile">
         <div class="profile"> <!-- Impostazione profilo -->
@@ -127,19 +140,13 @@
                     </ul>
                 </div>
                 <div class="certificazioni"> 
-                    <button class="certificazioni_button" onclick="ShowDiv()">Visualizza certificazioni</button>
-                    <ul>
-                        <li>Informatica Giuridica</li>
-                    </ul>
-                    <div class="certificazioni_box">
-                        <div class="card">
-                            <h2>Informatica Giuridica</h2>
-                            <img src="./Immagini/Certificazioni/Informatica_giuridica.png"><img>
-                        </div>  
-                        <div class="card">
-                            <h2 id="next">Prossimamente..</h2>
-                        </div>
+                    <div class="certificazioni_title">
+                        <button class="certificazioni_button" onclick="ShowDiv()">Visualizza certificazioni</button>
+                        <ul>
+                            <li>Informatica Giuridica</li>
+                        </ul>                
                     </div>
+                    <!--  -->
                 </div>
             </div>
         </div>
@@ -169,5 +176,16 @@
         </div>
     </div>
 </body>
+<div class="colonna_destra">
+    <div class="certificazioni_box_2">
+        <div class="card">
+            <h2>Informatica Giuridica</h2>
+            <img src="./Immagini/Certificazioni/Informatica_giuridica.png"><img>
+        </div>  
+        <div class="card">
+            <h2 id="next">Prossimamente..</h2>
+        </div>
+    </div>   
+</div>
 </html>
 

@@ -41,12 +41,18 @@
     .contacts_body {
         grid-template-columns: 1fr;
     }
-    .certificazioni_box {
-        position: relative;
-        grid-template-columns: 1fr;
-    }
+    
 } 
+@media only screen and (max-width: 1700px) {
+    .certificazioni {
+        align-items: center;
+    }
+    
+    .certificazioni_box_2{
+        display: none;
+}
 
+}
 
 
     
