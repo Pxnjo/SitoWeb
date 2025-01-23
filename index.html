@@ -13,11 +13,12 @@
     <script type="text/javascript" src="darkmode.js" defer></script>
     
 </head>
+<body class="body">
 <div class="colonna_sinistra">
     <div class="colonna_sinistra_1">
     </div>
 </div>
-<body class="body">
+<div class="corpo_principale">
     <div class="navigate_bar">
             <label class="search-label">
                 <input type="text" name="text" id="searchInput" class="input" required="" placeholder="Search..." oninput="highlightText()">
@@ -146,7 +147,15 @@
                             <li>Informatica Giuridica</li>
                         </ul>                
                     </div>
-                    <!--  -->
+                    <div class="certificazioni_box hidden">
+                        <div class="card">
+                            <h2>Informatica Giuridica</h2>
+                            <img src="./Immagini/Certificazioni/Informatica_giuridica.png"><img>
+                        </div>  
+                        <div class="card">
+                            <h2 id="next">Prossimamente..</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -175,7 +184,7 @@
             </div>
         </div>
     </div>
-</body>
+</div>
 <div class="colonna_destra">
     <div class="certificazioni_box_2">
         <div class="card">
@@ -187,5 +196,6 @@
         </div>
     </div>   
 </div>
+</body>
 </html>
 

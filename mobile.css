@@ -1,5 +1,11 @@
 @media only screen and (max-width: 600px) {
-    
+    .search-label {
+        left: 82%;
+    }
+    .button {
+        position: relative;
+        left: 83%;
+    }
     .curriculum_profile {
         width: 95%;
         grid-template-columns: 1fr;
@@ -43,17 +49,25 @@
     }
     
 } 
+
 @media only screen and (max-width: 1700px) {
+    .colonna_sinistra, .colonna_destra {
+        display: none;
+    }
     .certificazioni {
         align-items: center;
     }
-    
+    .certificazioni_box{
+        display: none ;
+    }
     .certificazioni_box_2{
         display: none;
-}
+    }
 
 }
 
-
-    
-
+@media only screen and (min-width: 1700px) {
+    .certificazioni_box{
+        display: none !important;
+    }
+}

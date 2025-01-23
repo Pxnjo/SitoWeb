@@ -1,11 +1,26 @@
 function ShowDiv() {
-            var x = document.querySelector(".certificazioni_box_2");
+  const certificazioniBox2 = document.querySelector('.certificazioni_box_2');
+  const certificazioniBox = document.querySelector('.certificazioni_box');
+  const screenWidth = window.matchMedia('(max-width: 1700px)').matches;
+
+  if (screenWidth) {
+    // On smaller screens, toggle certificazioni_box
+    var x = document.querySelector(".certificazioni_box");
             if (x.style.display === "none") {
               x.style.display = "flex";
             } else {
               x.style.display = "none";
             }
-        }
+  } else {
+    // On full screen, toggle certificazioni_box_2
+    var x = document.querySelector(".certificazioni_box_2");
+            if (x.style.display === "none") {
+              x.style.display = "flex";
+            } else {
+              x.style.display = "none";
+            }
+    }
+}
 
 
 function highlightText() {
