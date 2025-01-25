@@ -31,7 +31,7 @@
 
 /* impostazioni darkmode */
 .darkmode.body {
-    background-image: url('./immagini/Background/background_sea.png');
+    background-image: url('./Immagini/Background/background_sea.png');
 }
 #theme_switch{
     height: 50px;
@@ -77,7 +77,7 @@ html {  /* grendezza font tutto testo */
 body {
     background-color: var(--body-color);
     color: var(--mini-title-text-color);
-    background-image: url('./immagini/Background/background_purple.jpg');
+    background-image: url('./Immagini/Background/background_purple.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
