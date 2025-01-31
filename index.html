@@ -59,7 +59,7 @@
     </div>
     <div class="curriculum">
         <div class="group-1"> <!-- Impostazione competenze -->
-            <h3 class="title_group_1">Competenze</h3>
+            <h2 class="title_group_1">Competenze</h2>
             <div class="skills">
                 <div class="skill_colonna_1">
                     <div class="skills_list">
@@ -141,16 +141,18 @@
                     </ul>
                 </div>
                 <div class="certificazioni"> 
-                    <div class="certificazioni_title">
+                    <div>
+                        <h2 class="certificazioni_title">Certificazioni</h2>
                         <button class="certificazioni_button" onclick="ShowDiv()">Visualizza certificazioni</button>
                         <ul>
                             <li>Informatica Giuridica</li>
                         </ul>                
                     </div>
-                    <div class="certificazioni_box hidden">
+                    <div class="certificazioni_box hidden" style="display: none;">
                         <div class="card">
                             <h2>Informatica Giuridica</h2>
                             <img src="./Immagini/Certificazioni/Informatica_Giuridica.png"><img>
+                            <button class="expand_certs">Apri certificazione</button>
                         </div>  
                         <div class="card">
                             <h2 id="next">Prossimamente..</h2>
@@ -186,10 +188,11 @@
     </div>
 </div>
 <div class="colonna_destra">
-    <div class="certificazioni_box_2">
+    <div class="certificazioni_box_2" style="display: none;">
         <div class="card">
             <h2>Informatica Giuridica</h2>
             <img src="./Immagini/Certificazioni/Informatica_Giuridica.png"><img>
+            <a href="https://www.ponjo.net/Immagini/Certificazioni/Informatica_Giuridica.png" target="_blank"><button class="expand_certs" >Apri certificazione</button></a>
         </div>  
         <div class="card">
             <h2 id="next">Prossimamente..</h2>
