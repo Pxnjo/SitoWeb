@@ -94,6 +94,7 @@ a, td{
     /* max-width: 1000px; */
     width: 98%;
     margin: 0 auto;
+    margin-top: 4rem;
     margin-bottom: 4rem;
     display: grid;
     padding: 5rem;
