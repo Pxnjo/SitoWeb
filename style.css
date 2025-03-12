@@ -87,7 +87,7 @@ img {
     width: 100%;
   }
   /* description */
-.description, .skills_list, .description_school,.contacts_body_title, .work_description_align, .soft_skills_align, .link, .certificazioni {
+.description, .skills_list, .description_school,.contacts_body_title, .work_description_align, .soft_skills_align, .link, .certificazioni, .privacy {
     font-size: clamp(2rem, 7vw, 3em);;
     font-weight: 400;
     color: var(--description-color);
@@ -247,8 +247,6 @@ img {
     text-shadow: 0 1px 0 #7e7e7e;
     color: transparent;
   }
-
-
 .button {
     width: fit-content;
     position: relative;
@@ -494,5 +492,10 @@ img {
     padding-bottom: 1.2rem;
     .link{
         font-size: 1.5rem;
+    }
+}
+.privacy {
+    .link{
+        font-size: 2rem;
     }
 }
