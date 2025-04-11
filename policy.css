@@ -1,0 +1,103 @@
+
+/* all common layout page */
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+* { /* ridimensionamento bordi per tutto */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+:root{
+    --body-color: #0c0514; 
+    --curriculum-color: #260a42;
+    --mini-title-text-color: #F8E8D4;
+    --description-color: #B1ABA3;
+    --title-color-beige: #E0C19B;
+    --curriculum-hover: #120321;
+    --curriculum-hover-shadow: #2e1c4d;    
+}
+.body {
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-size: 100%; /* grandezza font body */
+    font-weight: 900;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+@media only screen and (min-width: 1700px){
+    .body {
+        margin: 0 auto;
+        position: relative; 
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+    }
+    .corpo_principale {
+        width:55%;
+    }
+}
+html {  /* grendezza font tutto testo */    
+    font-size: 10px;
+}
+body {
+    background-color: var(--body-color);
+    color: var(--mini-title-text-color);
+    background-image: url('./Immagini/Background/background_purple.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* descrizione */
+p, li, th{
+    font-size: clamp(1rem, 4vw, 2.5em);;
+    font-weight: 400;
+    color: var(--description-color);
+    font-style: italic;
+}
+/*  */
+a, td{
+    font-size: clamp(1rem, 1vw, 3em);;
+    font-weight: 400;
+    color: var(--description-color);
+    font-style: italic;
+}
+/* big title */
+.title{
+    color: var(--title-color-beige);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: clamp(1.8rem, 5vw, 3.5em);
+}
+/* small title */
+.small_tittle, h3{
+    color: var(--title-color-beige);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3em);
+    text-transform: uppercase;
+    font-style: normal;
+}
+.colonna_sinistra {
+    position: relative;
+    width: 22.5%;
+}
+.colonna_destra {
+    position: relative;
+    width: 22.5%;
+}
+.main {
+    border-radius: 1.5em;
+    text-align: center;
+    /* max-width: 1000px; */
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: grid;
+    padding: 5rem;
+    background-color: var(--curriculum-color);
+    gap: 7rem;
+}
